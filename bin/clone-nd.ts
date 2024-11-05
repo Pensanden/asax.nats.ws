@@ -50,31 +50,31 @@ await Deno.lstat(dir)
 
 const data = await Deno.readFile(lib);
 const txt = new TextDecoder().decode(data);
-const m = txt.match(
-  /(export \* from\s+"https:\/\/raw.githubusercontent.com\/nats-io\/nats.deno\/(\S+)\/nats-base-client\/internal_mod.ts")/m,
-);
-if (!m) {
-  console.error(`nats-base-client import not found in ${lib}`);
-  Deno.exit(1);
-}
+// const m = txt.match(
+//   /(export \* from\s+"https:\/\/raw.githubusercontent.com\/nats-io\/nats.deno\/(\S+)\/nats-base-client\/internal_mod.ts")/m,
+// );
+// if (!m) {
+//   console.error(`nats-base-client import not found in ${lib}`);
+//   Deno.exit(1);
+// }
 
 console.log(`matched branch ${m[2]}`);
 
-const git = Deno.run({
-  cwd: dir,
-  cmd: [
-    "git",
-    "clone",
-    `--branch=${m[2]}`,
-    "https://github.com/nats-io/nats.deno.git",
-  ],
-});
+// const git = Deno.run({
+//   cwd: dir,
+//   cmd: [
+//     "git",
+//     "clone",
+//     `--branch=${m[2]}`,
+//     "https://github.com/nats-io/nats.deno.git",
+//   ],
+// });
 
-git.status()
-  .then(() => {
-    console.log("OK");
-  })
-  .catch((err: Error) => {
-    console.error(`cloning nats.deno on branch ${m[2]} failed: ${err.message}`);
-    Deno.exit(1);
-  });
+// git.status()
+//   .then(() => {
+//     console.log("OK");
+//   })
+//   .catch((err: Error) => {
+//     // console.error(`cloning nats.deno on branch ${m[2]} failed: ${err.message}`);
+//     Deno.exit(1);
+//   });
