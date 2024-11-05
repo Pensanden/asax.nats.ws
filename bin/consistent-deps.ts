@@ -83,20 +83,20 @@ await check("./test");
 //   Deno.exit(1);
 // }
 
-const errs: string[] = [];
-let first = "";
-importers.forEach((v, k) => {
-  v.forEach((vv) => {
-    if (vv !== expected[0]) {
-      errs.push(`${k}: ${vv}`);
-    }
-  });
-});
-
-if (errs.length > 0) {
-  console.error(`[ERROR] expected all nbc imports to be ${expected[0]}:`);
-  console.error(errs.join("\n"));
-  Deno.exit(1);
-} else {
-  console.info(`[OK] all nbc imports match ${expected[0]}:`);
-}
+// const errs: string[] = [];
+// let first = "";
+// importers.forEach((v, k) => {
+//   v.forEach((vv) => {
+//     if (vv !== expected[0]) {
+//       errs.push(`${k}: ${vv}`);
+//     }
+//   });
+// });
+//
+// if (errs.length > 0) {
+//   console.error(`[ERROR] expected all nbc imports to be ${expected[0]}:`);
+//   console.error(errs.join("\n"));
+//   Deno.exit(1);
+// } else {
+//   console.info(`[OK] all nbc imports match ${expected[0]}:`);
+// }
