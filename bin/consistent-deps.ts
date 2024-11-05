@@ -76,7 +76,7 @@ await check("./test");
 
 // expected lib
 const expected = await getInternalReferences(
-  resolve("./src/nats-base-client.ts"),
+  resolve("../src/nats-base-client.ts"),
 );
 // if (expected.length === 0) {
 //   console.error(`nats-base-client imports not found`);
