@@ -58,7 +58,7 @@ const txt = new TextDecoder().decode(data);
 //   Deno.exit(1);
 // }
 
-console.log(`matched branch ${m[2]}`);
+// console.log(`matched branch ${m[2]}`);
 
 // const git = Deno.run({
 //   cwd: dir,
