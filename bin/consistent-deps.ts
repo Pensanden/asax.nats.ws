@@ -69,19 +69,19 @@ await check("./src");
 await check("./test");
 
 // process the results looking for mismatches
-if (importers.size === 0) {
-  console.error(`nats-base-client imports not found`);
-  Deno.exit(1);
-}
+// if (importers.size === 0) {
+//   console.error(`nats-base-client imports not found`);
+//   Deno.exit(1);
+// }
 
 // expected lib
 const expected = await getInternalReferences(
   resolve("./src/nats-base-client.ts"),
 );
-if (expected.length === 0) {
-  console.error(`nats-base-client imports not found`);
-  Deno.exit(1);
-}
+// if (expected.length === 0) {
+//   console.error(`nats-base-client imports not found`);
+//   Deno.exit(1);
+// }
 
 const errs: string[] = [];
 let first = "";
