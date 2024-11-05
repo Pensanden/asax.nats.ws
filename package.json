@@ -48,20 +48,21 @@
     "bump-qualifier": "npm version prerelease --no-commit-hooks --no-git-tag-version",
     "bump-release": "npm version patch --no-commit-hooks --no-git-tag-version"
   },
-  "optionalDependencies": {
-    "nkeys.js": "1.1.0"
+  "dependencies": {
+    "nkeys.js": "^1.1.0",
+    "ts-nkeys": "^1.0.16"
   },
   "devDependencies": {
     "@types/node": "^20.14.12",
     "ava": "^5.3.x",
     "minimist": "^1.2.8",
     "nats-jwt": "^0.0.9",
+    "nyc": "^15.1.0",
     "shx": "^0.3.3",
     "tslint": "^6.1.3",
     "typescript": "^5.5.4",
     "web-streams-polyfill": "^4.0.0",
-    "websocket": "^1.0.35",
-    "nyc": "^15.1.0"
+    "websocket": "^1.0.35"
   },
   "ava": {
     "failFast": true,

@@ -11,8 +11,6 @@ certs/
 .deps/
 cjs-build/
 cjs-wst/
-nats-base-client/
-jetstream/
 
 nats-server
 nats.js
