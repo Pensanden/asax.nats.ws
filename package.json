@@ -1,5 +1,5 @@
 {
-  "name": "nats.ws",
+  "name": "asax.nats.ws",
   "version": "1.29.2",
   "description": "WebSocket NATS client",
   "main": "./cjs/nats.js",
